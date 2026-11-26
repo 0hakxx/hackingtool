@@ -4,6 +4,7 @@ Regenerate with: uv run python scripts/gen_catalog_owners.py
 """
 
 CATALOG_OWNERS: frozenset[str] = frozenset({
+    "0hakxx",
     "1N3",
     "aboul3la",
     "aircrack-ng",

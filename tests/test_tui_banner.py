@@ -61,7 +61,7 @@ def test_osc8_links_rendered(monkeypatch):
     b = SponsorBanner(10)
     out = _ansi(b._tagline_text()) + _ansi(b._sponsor_text())
     assert "\x1b]8;" in out
-    assert "github.com/Z4nzu/hackingtool" in out
+    assert "github.com/0hakxx/hackingtool" in out
     assert "acme.example" in out
 
 

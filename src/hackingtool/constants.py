@@ -3,7 +3,10 @@ import platform
 import shutil as _shutil
 
 # ── Repository ────────────────────────────────────────────────────────────────
-REPO_OWNER   = "Z4nzu"
+# 0hakxx 미러: 상위(Z4nzu)가 사라져도 업데이트 체커(update_check.py)가
+# 0hakxx/hackingtool 릴리스를 조회하도록 리맵한다. LICENSE 와 README
+# 저작권 표기는 원작자(Z4nzu)를 유지해 MIT 조건을 지킨다.
+REPO_OWNER   = "0hakxx"
 REPO_NAME    = "hackingtool"
 REPO_URL     = f"https://github.com/{REPO_OWNER}/{REPO_NAME}.git"
 REPO_WEB_URL = f"https://github.com/{REPO_OWNER}/{REPO_NAME}"
