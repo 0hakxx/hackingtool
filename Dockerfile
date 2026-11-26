@@ -9,6 +9,13 @@ LABEL org.opencontainers.image.title="hackingtool" \
       org.opencontainers.image.source="https://github.com/Z4nzu/hackingtool" \
       org.opencontainers.image.licenses="MIT"
 
+# 0hakxx 미러 변경점: kalilinux/kali-rolling 이미지는 apt 요청을 지역 미러로 자동 리다이렉트하는데,
+# 공식 http.kali.org CDN 도 한국에서는 mirror.siwoo.org 등 SSL 인증서가 깨진 지역 미러로 보낸다.
+# 상위(Z4nzu)와 무관한 공개 인프라 문제이지만 재현 가능한 빌드를 위해 CloudFront 기반 kali.download 를 강제 지정한다
+# (https 가능, 지역 미러 리다이렉트 없음, Offensive Security 가 공식 운영).
+RUN rm -f /etc/apt/sources.list.d/*.sources /etc/apt/sources.list.d/*.list && \
+    echo 'deb http://kali.download/kali kali-rolling main contrib non-free non-free-firmware' > /etc/apt/sources.list
+
 # Runtime system deps: python + git (tools clone their own repos) + php/curl/wget
 # (a handful of tools shell out to these). --no-install-recommends keeps it lean.
 RUN apt-get update && \
