@@ -1,22 +1,26 @@
-# Tool catalog
+# 도구 카탈로그
 
-Every tool hackingtool can install, launch, or point you at — **219 active tools
-across 21 categories**, plus 44 archived entries kept out of this list (they are
-unmaintained or dead upstream and are hidden in the app unless you set
-`show_archived true` via `/config`).
+hackingtool 이 설치하거나 실행하거나 가리켜 주는 모든 도구 — **21 개 카테고리에
+걸친 활성 도구 219 개**, 그리고 이 목록에서 뺀 보관 항목 44 개(유지보수가 끊겼거나
+upstream 이 소멸한 것들로 `/config` 에서 `show_archived true` 를 설정하지 않으면
+앱에서 숨겨진다).
 
-Tags under each entry come from the fixed taxonomy in `src/hackingtool/tags.py`
-(63 tags in use). Inside the app you can filter by any of them with
-`@tag:<name>`, or search names/descriptions/tags with `/search <keyword>`.
+각 항목 아래 태그는 `src/hackingtool/tags.py` 의 고정 분류에서 온다(현재 63 개
+태그 사용 중). 앱 안에서 `@tag:<name>` 으로 어느 태그로든 필터링하거나
+`/search <keyword>` 로 이름/설명/태그를 검색할 수 있다.
 
-Entries marked as a link point at the upstream project; a few are curated
-reference resources (labs, cheat sheets, online services) rather than installable
-binaries — hackingtool opens those instead of installing them.
+링크로 표시된 항목은 upstream 프로젝트를 가리킨다. 일부는 설치 가능한 바이너리가
+아니라 큐레이션된 레퍼런스 리소스(랩, 치트시트, 온라인 서비스)이며 — hackingtool
+은 이런 항목들을 설치 대신 그냥 열어 준다.
 
-> **Authorized targets only.** Every tool here is for systems you own or have
-> written permission to test.
+> **인가된 대상에만.** 여기 있는 모든 도구는 당신이 소유하거나 테스트 권한을
+> 서면으로 받은 시스템 대상이다.
 
-Back to the [README](../README.md) · [How to use hackingtool](HOW-TO-USE.md)
+[README](../README.md) 로 돌아가기 · [hackingtool 사용법](HOW-TO-USE.md)
+
+> 섹션 헤더(영어)와 각 도구의 이름·설명·태그는 원문 그대로 유지한다. `/search`
+> 와 `@tag:` 명령이 영어 태그를 받고, README 의 카테고리 앵커 링크도 영어
+> 헤더를 기준으로 하므로 호환성을 위해 영어를 보존한다.
 
 ---
 
@@ -312,12 +316,12 @@ Back to the [README](../README.md) · [How to use hackingtool](HOW-TO-USE.md)
 
 ---
 
-## Adding a tool
+## 도구 추가하기
 
-Most tools are **one YAML entry** in `src/hackingtool/catalog/` — no Python. See
-[CONTRIBUTING.md](../CONTRIBUTING.md) for the entry format, the tag taxonomy, and
-the checks your PR has to pass (`make check`).
+대부분의 도구는 `src/hackingtool/catalog/` 안의 **YAML 한 항목**뿐 — Python
+불필요. 항목 포맷, 태그 분류, PR 이 통과해야 하는 검사(`make check`) 는
+[CONTRIBUTING.md](../CONTRIBUTING.md) 참고.
 
-Can't find what you need? Ask the console: `/find <what you're trying to do>`
-searches the catalog first, then GitHub, and shows real maintained repos with the
-reason each was ranked. See [HOW-TO-USE.md](HOW-TO-USE.md#4-find-a-tool-that-isnt-in-the-catalog-find).
+원하는 것을 못 찾겠나? 콘솔에 물어 보자: `/find <하고 싶은 일>` 이 카탈로그를
+먼저 검색한 뒤 GitHub 를 조회해, 각 결과가 상위에 오른 이유와 함께 유지보수되는
+실제 저장소를 보여 준다. [HOW-TO-USE.md](HOW-TO-USE.md#4-find-a-tool-that-isnt-in-the-catalog-find) 참고.
